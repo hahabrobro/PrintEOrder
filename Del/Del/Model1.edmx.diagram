@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56c426d3e54b4fe9bc0854581b6ee291" Name="Diagram1" ZoomLevel="53">
+        <EntityTypeShape EntityType="inikierpModel.customercode" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.eorder" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.eorderitem" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.invoice" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.invtitlecode" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.paywaycode" Width="1.5" PointX="5.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.productcode" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="inikierpModel.sendcode" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="inikierpModel.FK_eorder_customercode" ManuallyRouted="false" />
+        <AssociationConnector Association="inikierpModel.FK_invtitlecode_customercode" ManuallyRouted="false" />
+        <AssociationConnector Association="inikierpModel.eorder_eorder_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="inikierpModel.eorderitem_orderItem" ManuallyRouted="false" />
+        <AssociationConnector Association="inikierpModel.invoice_odId" ManuallyRouted="false" />
+        <AssociationConnector Association="inikierpModel.eorderitem_productCode" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

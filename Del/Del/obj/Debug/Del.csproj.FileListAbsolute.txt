@@ -1,0 +1,9 @@
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\Del.dll.config
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\Del.dll
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\Del.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\obj\Debug\Del.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\obj\Debug\Del.dll
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\obj\Debug\Del.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\EntityFramework.dll
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\EntityFramework.xml
+c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\zh-Hant\EntityFramework.resources.dll

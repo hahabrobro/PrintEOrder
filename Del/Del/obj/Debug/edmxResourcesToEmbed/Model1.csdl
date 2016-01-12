@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="inikierpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="customercode">
+    <Key>
+      <PropertyRef Name="cusID" />
+    </Key>
+    <Property Name="cusID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cusAcc" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+    <Property Name="cusKind" Type="Int16" />
+    <Property Name="tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="simpleComany" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="cusName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="cusPws" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="companyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tax" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="zip" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="companyAddress" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="sendAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="taxAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cusEmail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="payID" Type="Int16" />
+    <Property Name="invTitleCode" Type="Int16" />
+    <Property Name="contactMobile" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="buildDate" Type="DateTime" Precision="0" />
+    <Property Name="cusMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cClerk" Type="Int32" />
+    <Property Name="rutenId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="eorder" Relationship="Self.FK_eorder_customercode" FromRole="customercode" ToRole="eorder" />
+    <NavigationProperty Name="invtitlecode1" Relationship="Self.FK_invtitlecode_customercode" FromRole="customercode" ToRole="invtitlecode" />
+  </EntityType>
+  <EntityType Name="eorder">
+    <Key>
+      <PropertyRef Name="odID" />
+    </Key>
+    <Property Name="odID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderNo" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="storeNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="storeID" Type="Int16" />
+    <Property Name="cusID" Type="Int64" />
+    <Property Name="langID" Type="Int16" />
+    <Property Name="payID" Type="Int16" />
+    <Property Name="invNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="total" Type="Double" />
+    <Property Name="tax" Type="Decimal" Precision="8" Scale="0" />
+    <Property Name="noTax" Type="Double" />
+    <Property Name="sendID" Type="Int16" />
+    <Property Name="eoClerk" Type="Int32" Nullable="false" />
+    <Property Name="curID" Type="Int16" />
+    <Property Name="eoDate" Type="DateTime" Precision="0" />
+    <Property Name="isTax" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="invTitleCode" Type="Int32" />
+    <Property Name="isMerger" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="isClose" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="isPayment" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="eStatusID" Type="Int32" />
+    <Property Name="payment_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="eoMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="companyMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="shipment" Type="Int16" />
+    <NavigationProperty Name="customercode" Relationship="Self.FK_eorder_customercode" FromRole="eorder" ToRole="customercode" />
+    <NavigationProperty Name="sendcode" Relationship="Self.eorder_eorder_ibfk_1" FromRole="eorder" ToRole="sendcode" />
+    <NavigationProperty Name="eorderitem" Relationship="Self.eorderitem_orderItem" FromRole="eorder" ToRole="eorderitem" />
+    <NavigationProperty Name="invoice" Relationship="Self.invoice_odId" FromRole="eorder" ToRole="invoice" />
+  </EntityType>
+  <EntityType Name="eorderitem">
+    <Key>
+      <PropertyRef Name="odItemID" />
+    </Key>
+    <Property Name="odID" Type="Int64" Nullable="false" />
+    <Property Name="odItemID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="invi" Type="Int64" />
+    <Property Name="prodID" Type="Int64" Nullable="false" />
+    <Property Name="disCount" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="qty" Type="Double" />
+    <Property Name="iunitDesc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="unitPrice" Type="Double" />
+    <Property Name="isValue" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="oldItemPrID" Type="Int64" />
+    <Property Name="deliveryDate" Type="DateTime" Precision="0" />
+    <Property Name="note" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="isPrint" Type="Boolean" />
+    <NavigationProperty Name="eorder" Relationship="Self.eorderitem_orderItem" FromRole="eorderitem" ToRole="eorder" />
+    <NavigationProperty Name="productcode" Relationship="Self.eorderitem_productCode" FromRole="eorderitem" ToRole="productcode" />
+  </EntityType>
+  <EntityType Name="invoice">
+    <Key>
+      <PropertyRef Name="invID" />
+    </Key>
+    <Property Name="invID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="odID" Type="Int64" Nullable="false" />
+    <Property Name="invNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="invalidDate" Type="DateTime" Precision="0" />
+    <Property Name="sDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="eUid" Type="Int32" Nullable="false" />
+    <Property Name="afterTax" Type="Double" Nullable="false" />
+    <Property Name="preTax" Type="Double" Nullable="false" />
+    <Property Name="tax" Type="Double" Nullable="false" />
+    <Property Name="Taxkind" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="company" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="invCode" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="invTitle" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="isTitle" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="invKind" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="checkNo" Type="Int32" Nullable="false" />
+    <Property Name="org" Type="Int32" />
+    <Property Name="isVoid" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="invalidClerk" Type="Int32" />
+    <Property Name="invPrintTime" Type="Time" Precision="7" />
+    <Property Name="invMemo" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="eorder" Relationship="Self.invoice_odId" FromRole="invoice" ToRole="eorder" />
+  </EntityType>
+  <EntityType Name="invtitlecode">
+    <Key>
+      <PropertyRef Name="invTitleCode1" />
+    </Key>
+    <Property Name="invTitleCode1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cusID" Type="Int64" Nullable="false" />
+    <Property Name="invCode" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="invTitleDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="customercode" Relationship="Self.FK_invtitlecode_customercode" FromRole="invtitlecode" ToRole="customercode" />
+  </EntityType>
+  <EntityType Name="paywaycode">
+    <Key>
+      <PropertyRef Name="payID" />
+    </Key>
+    <Property Name="payID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="payDesc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productcode">
+    <Key>
+      <PropertyRef Name="prodID" />
+    </Key>
+    <Property Name="prodID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prodAcc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="prodDesc" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="prodEnDesc" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="prodType" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="pWeight" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="srcPartNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="prodSize" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="prodSCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="bUnitID" Type="Int16" />
+    <Property Name="pUnitID" Type="Int16" />
+    <Property Name="ppID" Type="Int16" />
+    <Property Name="prodSeq" Type="String" MaxLength="14" FixedLength="true" Unicode="true" />
+    <Property Name="prodSellPrice" Type="Double" />
+    <Property Name="pHighCost" Type="Double" />
+    <Property Name="pLowCost" Type="Double" />
+    <Property Name="pAvgCost" Type="Double" />
+    <Property Name="pOrderQty" Type="Int32" />
+    <Property Name="pNowQty" Type="Int32" />
+    <Property Name="supID" Type="Int64" />
+    <Property Name="pMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pImg" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="pStorageSpaces" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="pInDate" Type="DateTime" Precision="0" />
+    <Property Name="pOutDate" Type="DateTime" Precision="0" />
+    <Property Name="pBuildDate" Type="DateTime" Precision="0" />
+    <Property Name="pTranDate" Type="DateTime" Precision="0" />
+    <Property Name="pClerk" Type="Int32" />
+    <NavigationProperty Name="eorderitem" Relationship="Self.eorderitem_productCode" FromRole="productcode" ToRole="eorderitem" />
+  </EntityType>
+  <EntityType Name="sendcode">
+    <Key>
+      <PropertyRef Name="sendID" />
+    </Key>
+    <Property Name="sendID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sendName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="eorder" Relationship="Self.eorder_eorder_ibfk_1" FromRole="sendcode" ToRole="eorder" />
+  </EntityType>
+  <Association Name="FK_eorder_customercode">
+    <End Role="customercode" Type="Self.customercode" Multiplicity="0..1" />
+    <End Role="eorder" Type="Self.eorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customercode">
+        <PropertyRef Name="cusID" />
+      </Principal>
+      <Dependent Role="eorder">
+        <PropertyRef Name="cusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_invtitlecode_customercode">
+    <End Role="customercode" Type="Self.customercode" Multiplicity="1" />
+    <End Role="invtitlecode" Type="Self.invtitlecode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customercode">
+        <PropertyRef Name="cusID" />
+      </Principal>
+      <Dependent Role="invtitlecode">
+        <PropertyRef Name="cusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eorder_eorder_ibfk_1">
+    <End Role="sendcode" Type="Self.sendcode" Multiplicity="0..1" />
+    <End Role="eorder" Type="Self.eorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sendcode">
+        <PropertyRef Name="sendID" />
+      </Principal>
+      <Dependent Role="eorder">
+        <PropertyRef Name="sendID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eorderitem_orderItem">
+    <End Role="eorder" Type="Self.eorder" Multiplicity="1" />
+    <End Role="eorderitem" Type="Self.eorderitem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="eorder">
+        <PropertyRef Name="odID" />
+      </Principal>
+      <Dependent Role="eorderitem">
+        <PropertyRef Name="odID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="invoice_odId">
+    <End Role="eorder" Type="Self.eorder" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="eorder">
+        <PropertyRef Name="odID" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="odID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eorderitem_productCode">
+    <End Role="productcode" Type="Self.productcode" Multiplicity="1" />
+    <End Role="eorderitem" Type="Self.eorderitem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productcode">
+        <PropertyRef Name="prodID" />
+      </Principal>
+      <Dependent Role="eorderitem">
+        <PropertyRef Name="prodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="inikierpEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customercode" EntityType="Self.customercode" />
+    <EntitySet Name="eorder" EntityType="Self.eorder" />
+    <EntitySet Name="eorderitem" EntityType="Self.eorderitem" />
+    <EntitySet Name="invoice" EntityType="Self.invoice" />
+    <EntitySet Name="invtitlecode" EntityType="Self.invtitlecode" />
+    <EntitySet Name="paywaycode" EntityType="Self.paywaycode" />
+    <EntitySet Name="productcode" EntityType="Self.productcode" />
+    <EntitySet Name="sendcode" EntityType="Self.sendcode" />
+    <AssociationSet Name="FK_eorder_customercode" Association="Self.FK_eorder_customercode">
+      <End Role="customercode" EntitySet="customercode" />
+      <End Role="eorder" EntitySet="eorder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_invtitlecode_customercode" Association="Self.FK_invtitlecode_customercode">
+      <End Role="customercode" EntitySet="customercode" />
+      <End Role="invtitlecode" EntitySet="invtitlecode" />
+    </AssociationSet>
+    <AssociationSet Name="eorder_eorder_ibfk_1" Association="Self.eorder_eorder_ibfk_1">
+      <End Role="sendcode" EntitySet="sendcode" />
+      <End Role="eorder" EntitySet="eorder" />
+    </AssociationSet>
+    <AssociationSet Name="eorderitem_orderItem" Association="Self.eorderitem_orderItem">
+      <End Role="eorder" EntitySet="eorder" />
+      <End Role="eorderitem" EntitySet="eorderitem" />
+    </AssociationSet>
+    <AssociationSet Name="invoice_odId" Association="Self.invoice_odId">
+      <End Role="eorder" EntitySet="eorder" />
+      <End Role="invoice" EntitySet="invoice" />
+    </AssociationSet>
+    <AssociationSet Name="eorderitem_productCode" Association="Self.eorderitem_productCode">
+      <End Role="productcode" EntitySet="productcode" />
+      <End Role="eorderitem" EntitySet="eorderitem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

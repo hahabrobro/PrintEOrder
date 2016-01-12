@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="inikierpModelStoreContainer" CdmEntityContainer="inikierpEntities">
+    <EntitySetMapping Name="customercode">
+      <EntityTypeMapping TypeName="inikierpModel.customercode">
+        <MappingFragment StoreEntitySet="customercode">
+          <ScalarProperty Name="cusID" ColumnName="cusID" />
+          <ScalarProperty Name="cusAcc" ColumnName="cusAcc" />
+          <ScalarProperty Name="cusKind" ColumnName="cusKind" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="simpleComany" ColumnName="simpleComany" />
+          <ScalarProperty Name="cusName" ColumnName="cusName" />
+          <ScalarProperty Name="cusPws" ColumnName="cusPws" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="contactName" ColumnName="contactName" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="companyAddress" ColumnName="companyAddress" />
+          <ScalarProperty Name="sendAddress" ColumnName="sendAddress" />
+          <ScalarProperty Name="taxAddress" ColumnName="taxAddress" />
+          <ScalarProperty Name="cusEmail" ColumnName="cusEmail" />
+          <ScalarProperty Name="payID" ColumnName="payID" />
+          <ScalarProperty Name="invTitleCode" ColumnName="invTitleCode" />
+          <ScalarProperty Name="contactMobile" ColumnName="contactMobile" />
+          <ScalarProperty Name="buildDate" ColumnName="buildDate" />
+          <ScalarProperty Name="cusMemo" ColumnName="cusMemo" />
+          <ScalarProperty Name="cClerk" ColumnName="cClerk" />
+          <ScalarProperty Name="rutenId" ColumnName="rutenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eorder">
+      <EntityTypeMapping TypeName="inikierpModel.eorder">
+        <MappingFragment StoreEntitySet="eorder">
+          <ScalarProperty Name="odID" ColumnName="odID" />
+          <ScalarProperty Name="orderNo" ColumnName="orderNo" />
+          <ScalarProperty Name="storeNumber" ColumnName="storeNumber" />
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="cusID" ColumnName="cusID" />
+          <ScalarProperty Name="langID" ColumnName="langID" />
+          <ScalarProperty Name="payID" ColumnName="payID" />
+          <ScalarProperty Name="invNo" ColumnName="invNo" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="noTax" ColumnName="noTax" />
+          <ScalarProperty Name="sendID" ColumnName="sendID" />
+          <ScalarProperty Name="eoClerk" ColumnName="eoClerk" />
+          <ScalarProperty Name="curID" ColumnName="curID" />
+          <ScalarProperty Name="eoDate" ColumnName="eoDate" />
+          <ScalarProperty Name="isTax" ColumnName="isTax" />
+          <ScalarProperty Name="invTitleCode" ColumnName="invTitleCode" />
+          <ScalarProperty Name="isMerger" ColumnName="isMerger" />
+          <ScalarProperty Name="isClose" ColumnName="isClose" />
+          <ScalarProperty Name="isPayment" ColumnName="isPayment" />
+          <ScalarProperty Name="eStatusID" ColumnName="eStatusID" />
+          <ScalarProperty Name="payment_no" ColumnName="payment_no" />
+          <ScalarProperty Name="eoMemo" ColumnName="eoMemo" />
+          <ScalarProperty Name="companyMemo" ColumnName="companyMemo" />
+          <ScalarProperty Name="shipment" ColumnName="shipment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eorderitem">
+      <EntityTypeMapping TypeName="inikierpModel.eorderitem">
+        <MappingFragment StoreEntitySet="eorderitem">
+          <ScalarProperty Name="odID" ColumnName="odID" />
+          <ScalarProperty Name="odItemID" ColumnName="odItemID" />
+          <ScalarProperty Name="invi" ColumnName="invi" />
+          <ScalarProperty Name="prodID" ColumnName="prodID" />
+          <ScalarProperty Name="disCount" ColumnName="disCount" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="iunitDesc" ColumnName="iunitDesc" />
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="isValue" ColumnName="isValue" />
+          <ScalarProperty Name="oldItemPrID" ColumnName="oldItemPrID" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="isPrint" ColumnName="isPrint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invoice">
+      <EntityTypeMapping TypeName="inikierpModel.invoice">
+        <MappingFragment StoreEntitySet="invoice">
+          <ScalarProperty Name="invID" ColumnName="invID" />
+          <ScalarProperty Name="odID" ColumnName="odID" />
+          <ScalarProperty Name="invNo" ColumnName="invNo" />
+          <ScalarProperty Name="invalidDate" ColumnName="invalidDate" />
+          <ScalarProperty Name="sDate" ColumnName="sDate" />
+          <ScalarProperty Name="eUid" ColumnName="eUid" />
+          <ScalarProperty Name="afterTax" ColumnName="afterTax" />
+          <ScalarProperty Name="preTax" ColumnName="preTax" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="Taxkind" ColumnName="Taxkind" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="invCode" ColumnName="invCode" />
+          <ScalarProperty Name="invTitle" ColumnName="invTitle" />
+          <ScalarProperty Name="isTitle" ColumnName="isTitle" />
+          <ScalarProperty Name="invKind" ColumnName="invKind" />
+          <ScalarProperty Name="checkNo" ColumnName="checkNo" />
+          <ScalarProperty Name="org" ColumnName="org" />
+          <ScalarProperty Name="isVoid" ColumnName="isVoid" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="invalidClerk" ColumnName="invalidClerk" />
+          <ScalarProperty Name="invPrintTime" ColumnName="invPrintTime" />
+          <ScalarProperty Name="invMemo" ColumnName="invMemo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invtitlecode">
+      <EntityTypeMapping TypeName="inikierpModel.invtitlecode">
+        <MappingFragment StoreEntitySet="invtitlecode">
+          <ScalarProperty Name="invTitleCode1" ColumnName="invTitleCode" />
+          <ScalarProperty Name="cusID" ColumnName="cusID" />
+          <ScalarProperty Name="invCode" ColumnName="invCode" />
+          <ScalarProperty Name="invTitleDesc" ColumnName="invTitleDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paywaycode">
+      <EntityTypeMapping TypeName="inikierpModel.paywaycode">
+        <MappingFragment StoreEntitySet="paywaycode">
+          <ScalarProperty Name="payID" ColumnName="payID" />
+          <ScalarProperty Name="payDesc" ColumnName="payDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productcode">
+      <EntityTypeMapping TypeName="inikierpModel.productcode">
+        <MappingFragment StoreEntitySet="productcode">
+          <ScalarProperty Name="prodID" ColumnName="prodID" />
+          <ScalarProperty Name="prodAcc" ColumnName="prodAcc" />
+          <ScalarProperty Name="prodDesc" ColumnName="prodDesc" />
+          <ScalarProperty Name="prodEnDesc" ColumnName="prodEnDesc" />
+          <ScalarProperty Name="prodType" ColumnName="prodType" />
+          <ScalarProperty Name="pWeight" ColumnName="pWeight" />
+          <ScalarProperty Name="srcPartNo" ColumnName="srcPartNo" />
+          <ScalarProperty Name="prodSize" ColumnName="prodSize" />
+          <ScalarProperty Name="prodSCode" ColumnName="prodSCode" />
+          <ScalarProperty Name="bUnitID" ColumnName="bUnitID" />
+          <ScalarProperty Name="pUnitID" ColumnName="pUnitID" />
+          <ScalarProperty Name="ppID" ColumnName="ppID" />
+          <ScalarProperty Name="prodSeq" ColumnName="prodSeq" />
+          <ScalarProperty Name="prodSellPrice" ColumnName="prodSellPrice" />
+          <ScalarProperty Name="pHighCost" ColumnName="pHighCost" />
+          <ScalarProperty Name="pLowCost" ColumnName="pLowCost" />
+          <ScalarProperty Name="pAvgCost" ColumnName="pAvgCost" />
+          <ScalarProperty Name="pOrderQty" ColumnName="pOrderQty" />
+          <ScalarProperty Name="pNowQty" ColumnName="pNowQty" />
+          <ScalarProperty Name="supID" ColumnName="supID" />
+          <ScalarProperty Name="pMemo" ColumnName="pMemo" />
+          <ScalarProperty Name="pImg" ColumnName="pImg" />
+          <ScalarProperty Name="pStorageSpaces" ColumnName="pStorageSpaces" />
+          <ScalarProperty Name="pInDate" ColumnName="pInDate" />
+          <ScalarProperty Name="pOutDate" ColumnName="pOutDate" />
+          <ScalarProperty Name="pBuildDate" ColumnName="pBuildDate" />
+          <ScalarProperty Name="pTranDate" ColumnName="pTranDate" />
+          <ScalarProperty Name="pClerk" ColumnName="pClerk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sendcode">
+      <EntityTypeMapping TypeName="inikierpModel.sendcode">
+        <MappingFragment StoreEntitySet="sendcode">
+          <ScalarProperty Name="sendID" ColumnName="sendID" />
+          <ScalarProperty Name="sendName" ColumnName="sendName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
