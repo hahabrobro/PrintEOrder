@@ -75,10 +75,10 @@
     <Content Include="PrintEorder.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReport2.cs">
+    <Compile Include="Ace.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <DependentUpon>Ace.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSet2.Designer.cs">
@@ -191,9 +191,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CrystalReport2.rpt">
+    <EmbeddedResource Include="Ace.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+      <LastGenOutput>Ace.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Print_Eorder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

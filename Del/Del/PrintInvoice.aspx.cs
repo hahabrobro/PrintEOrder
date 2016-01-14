@@ -47,7 +47,7 @@ namespace Del
         public void GH()
         {
             customerReport = new ReportDocument();
-            customerReport.Load(Server.MapPath("Print_Invoice.rpt"));
+            customerReport.Load(Server.MapPath("Ace.rpt"));
 
             DataSet dssql = new DataSet();
             
@@ -73,7 +73,7 @@ namespace Del
                 //}
                 var yy = from ei in ent.eorderitem
                          join pd in ent.productcode on ei.prodID equals pd.prodID
-                         where ei.odID == 62637
+                         where ei.odID == 62636
                          select new { pd.prodDesc, ei.qty, ei.unitPrice };
                 int j = 0;
                 foreach(var f in yy)
