@@ -45,6 +45,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="InternationalNumericFormatter">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio International Feature Pack 2.0\NumericConversion\InternationalNumericFormatter.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
@@ -67,14 +70,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PrintInvoice.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="PrintEorder.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintInvoice.aspx.cs">
+      <DependentUpon>PrintInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintInvoice.aspx.designer.cs">
+      <DependentUpon>PrintInvoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Print_Eorder.cs">
       <AutoGen>True</AutoGen>
@@ -115,6 +132,12 @@
     <Compile Include="paywaycode.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Print_Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Print_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="productcode.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -122,12 +145,12 @@
     <Compile Include="sendcode.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="PrintEorder.aspx.cs">
+      <DependentUpon>PrintEorder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="PrintEorder.aspx.designer.cs">
+      <DependentUpon>PrintEorder.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -168,9 +191,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Print_Eorder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Print_Eorder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Print_Invoice.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

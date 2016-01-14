@@ -7,3 +7,18 @@ c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\obj\Debug\D
 c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\EntityFramework.dll
 c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\EntityFramework.xml
 c:\users\administrator\documents\visual studio 2013\Projects\Del\Del\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\Del.dll.config
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\Del.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\Del.pdb
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\EntityFramework.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\InternationalNumericFormatter.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\EntityFramework.xml
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\ar\InternationalNumericFormatter.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\ja\InternationalNumericFormatter.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\ko\InternationalNumericFormatter.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\zh-CHS\InternationalNumericFormatter.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\bin\zh-CHT\InternationalNumericFormatter.resources.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\obj\Debug\Del.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\obj\Debug\Del.dll
+C:\Users\Administrator\Documents\GitHub\PrintEOrder\Del\Del\obj\Debug\Del.pdb
