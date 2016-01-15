@@ -47,7 +47,7 @@ namespace Del
         public void GH()
         {
             customerReport = new ReportDocument();
-            customerReport.Load(Server.MapPath("Ace.rpt"));
+            customerReport.Load(Server.MapPath("Print_Invoice.rpt"));//Print_Invoice
 
             DataSet dssql = new DataSet();
             
