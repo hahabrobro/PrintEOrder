@@ -17,7 +17,6 @@ namespace Del
         protected void Page_Load(object sender, EventArgs e)
         {
             GH();
-            
         }
         public string GetChineseNumber(string number)
         {
@@ -73,7 +72,7 @@ namespace Del
                 //}
                 var yy = from ei in ent.eorderitem
                          join pd in ent.productcode on ei.prodID equals pd.prodID
-                         where ei.odID == 62636
+                         where ei.odID == 62632
                          select new { pd.prodDesc, ei.qty, ei.unitPrice };
                 int j = 0;
                 foreach(var f in yy)
